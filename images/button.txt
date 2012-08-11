@@ -1,0 +1,45 @@
+.sprite {
+    background: url(download.png) no-repeat;
+}
+
+.sprite-__-01-png {
+    width: 138px;
+    height: 84px;
+    background-position: -315px -95px;
+}
+
+.sprite-__-_-png {
+    width: 304px;
+    height: 54px;
+    background-position: -0px -130px;
+}
+
+.sprite-__-__-01-png {
+    width: 304px;
+    height: 54px;
+    background-position: -0px -65px;
+}
+
+.sprite-__-__-__-png {
+    width: 304px;
+    height: 54px;
+    background-position: -0px -0px;
+}
+
+.sprite-__-__-png {
+    width: 138px;
+    height: 84px;
+    background-position: -315px -0px;
+}
+
+.sprite-__-__-png-1 {
+    width: 138px;
+    height: 84px;
+    background-position: -149px -195px;
+}
+
+.sprite-__-png {
+    width: 138px;
+    height: 84px;
+    background-position: -0px -195px;
+}

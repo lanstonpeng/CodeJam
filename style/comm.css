@@ -1,0 +1,55 @@
+/*reset*/
+body,html,ul {
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font: 15px/1.5em Georgia,"Microsoft YaHei",serif;
+}
+body.boy {
+	background: url(../images/page_bg.png) repeat 0 0 #222;
+}
+body.girl {
+	background: url(../images/page_bg.png) repeat 0 0 #eee;
+}
+
+.opacity0 {
+	opacity: 0;
+}
+
+
+.game_stage,
+#welcome {
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 900px;
+	height: 600px;
+	margin: -310px 0 0 -450px;
+	/*margin: 1% auto;*/
+	background: #fff;
+	box-shadow: 0 0 22px #555;
+}
+.game_title {
+	width: 100%;
+	height: 100%;
+}
+/*#welcome*/
+#welcome {
+	background: #555;
+	box-shadow: none;
+	-webkit-transition: opacity 3s;
+}
+#welcome .loading_bar {
+	position: absolute;
+	top:50%;
+	left: 100px;
+	margin: -15px 0 0 0;
+	width: 0;
+	height: 30px;
+	background: #ccc;
+	/*-webkit-transition: width 1s;*/
+}

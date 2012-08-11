@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>我的记事本不可能那么可爱</title>
+<link rel="stylesheet" type="text/css" href="style/comm.css">
+</head>
+<body class="girl">
+<div class="game_title">
+	
+</div>
+<div class="game_wrap">
+	<div class="game_stage">
+		<div class="plan_list">	
+			<div class="header"></div>
+			<ul>
+			</ul>
+			<div class="operation"></div>
+		</div>
+		<canvas id="avatar"></canvas>
+		<div class="talk">
+			<div class="talk_title"></div>
+			<div class="talk_content"></div>
+		</div>
+	</div>
+	<div id="welcome">
+		<div class="loading_bar"></div>
+	</div>
+</div>
+<script type="text/html" id="tmpl_planlist">
+	<% for(var i = 0, leng = list.length; i < leng; i++){ %>
+		<li class="plan_item"><a href="javascript:;"><%=list[i]%></a></li>
+	<% } %>
+</script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/model.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
