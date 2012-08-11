@@ -36,6 +36,22 @@ var Person = function(sex,ctx,width,height) {
 
 	}
 }
+function flash(/*obj*/ctx, /*num*/height, /*num*/width, /*array*/imgList, /*num*/timeout) {
+	var width = width;
+	var height = height;
+	var ctx = ctx;
+	var leng = imgList.length;
+	var count = 0;
+	var timer = setInterval(function() {
+		ctx.clearRect(0, 0, width, height);
+		ctx.drawImage(imgList[count], 0, 0);
+		count += 1;
+		if (count >= leng) {
+			clearInterval(timer);
+		}
+	}, timeout);
+}
+
 Person.prototype.normalFace = {
 
 }
@@ -57,14 +73,68 @@ function oldPerson(face, ctx, width, height, faceCtx, fWidth, fHeight) {
 	var blacklineImg;
 	var loadImg();
 }
-Person.prototype.loadImg = function() {
-	
-}
-Person.prototype.normalFace = function() {
-	var ctx.clearRect(0, 0, var width, var height);
-	var ctx.drawImage(var normalImg, 0, 0);
-}
-Person.prototype.sadFace = function() {
+Persoon.prototype = (function(){
+	var faceMapping = {
+		"girl":{
+			"sad":{
+				x:0,
+				y:0
+			} 
+		},
+		"boy":{}
+	};
+
+	return {
+		loadImg : function() {
+		
+		},
+		normalFace : function() {
+			ctx.clearRect(0, 0, var width, var height);
+			ctx.drawImage(var normalImg, 0, 0);
+		},
+		showFace : function(faceType,humanType){
+			var faceType = faceType || "normal",
+				humanType = humanType || "girl";
+			switch (faceType)
+			{
+				case "normal" :
+					ctx.clearRect(0, 0, var width, var height);
+					//ctx.drawImage(var normalImg, 0, 0);
+					ctx.drawImage(normalImg,faceMapping[humanType].x,faceMapping[humanType].y );
+					break;
+				case "sad" :
+					ctx.clearRect(0, 0, var width, var height);
+					ctx.drawImage(var sadImgList[0], 0, 0);
+					break;
+				case "angry":
+				//case ....
+
+			}
+
+		},
+		cancleFace : function(){
+			faceCtx.clearRect(0, 0, var fWidth, var fHeight);
+		},
+		talk : function(params) {
+			var params = params || {},
+				title = params.title || "",
+				content = params.content || "";
+			
+			$("div.talk .talk_title").html(title);
+			$("div.talk .talk_content").html(content);
+
+		},
+		addTouchCallback : function(area,callback){
+
+		}
+
+	}
+
+})();
+
+
+
+/*Person.prototype.sadFace = function() {
 	var ctx.clearRect(0, 0, var width, var height);
 	var ctx.drawImage(var sadImgList[0], 0, 0);	
 }
@@ -107,13 +177,14 @@ Person.prototype.angryAnimate = function() {
 }
 
 Person.prototype.talk = function(params) {
-	var title = params.title || "",
+	var params = params || {},
+		title = params.title || "",
 		content = params.content || "";
 	
 	$("div.talk .talk_title").html(title);
 	$("div.talk .talk_content").html(content);
 
-}
+}*/
 
 function Girl(face, ctx, width, height, faceCtx, fWidth, fHeight) {
 	Person.call(this, face, ctx, width, height, faceCtx, fWidth, fHeight);
@@ -188,18 +259,3 @@ Girl.prototype.loadImg = function() {
 }
 
 
-function flash(/*obj*/ctx, /*num*/height, /*num*/width, /*array*/imgList, /*num*/timeout) {
-	var width = width;
-	var height = height;
-	var ctx = ctx;
-	var leng = imgList.length;
-	var count = 0;
-	var timer = setInterval(function() {
-		ctx.clearRect(0, 0, width, height);
-		ctx.drawImage(imgList[count], 0, 0);
-		count += 1;
-		if (count >= leng) {
-			clearInterval(timer);
-		}
-	}, timeout);
-}

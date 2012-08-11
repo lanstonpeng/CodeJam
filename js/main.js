@@ -17,3 +17,34 @@ NB.Ctrl.start = function() {
 	
 }
 NB.Ctrl.init();
+
+//NoteBook Module
+var Notebook = (function(){
+	//save 
+	//load
+	//remainder
+
+	var 
+		_init = function(){
+			//load the old notebook
+
+		},
+		_save = function(){
+
+
+		},
+		_setReminder = function( endTime ,callback){
+
+
+		};
+
+	return {
+		init : _init,
+		save : _save,
+		setReminder : _setReminder
+
+	}
+
+})();
+
+//Touch Module
