@@ -35,6 +35,8 @@ var Person = function(sex,ctx,width,height) {
 	} else {
 
 	}
+	//好感度
+	var _ranking;
 }
 function flash(/*obj*/ctx, /*num*/height, /*num*/width, /*array*/imgList, /*num*/timeout) {
 	var width = width;
@@ -119,12 +121,26 @@ Persoon.prototype = (function(){
 			var params = params || {},
 				title = params.title || "",
 				content = params.content || "";
+				
 			
 			$("div.talk .talk_title").html(title);
 			$("div.talk .talk_content").html(content);
 
+
+		},
+		speak : function(params){
+			var params = params || {};
+				voice =params.voice;
+			var mySound = new buzz.sound("resource/"+voiceMapping[voice||"music"]);
+            mySound.play();
 		},
 		addTouchCallback : function(area,callback){
+
+		},
+		improveRanking : function(){
+
+		},
+		decreaseRanking :function(){
 
 		}
 

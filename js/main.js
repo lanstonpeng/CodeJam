@@ -53,6 +53,9 @@ var Notebook = (function(){
 					i.endTime < now && this._setReminder(i.endTime);
 				}
 			}
+
+			//set some listener
+			
 		},
 		_save = function(params){
 			var params = params || {},
