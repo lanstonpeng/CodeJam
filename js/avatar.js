@@ -120,11 +120,16 @@ Persoon.prototype = (function(){
 		talk : function(params) {
 			var params = params || {},
 				title = params.title || "",
-				content = params.content || "";
+				content = params.content || ""，
+				talkBox = $("div.talk"),
+				voiceName = params.voice;
 				
 			
 			$("div.talk .talk_title").html(title);
 			$("div.talk .talk_content").html(content);
+
+			voiceName && this.speak({voice:voiceName});
+			talkBox.fadeIn("fast")；
 
 
 		},
